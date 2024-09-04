@@ -37,7 +37,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chat GPT'),
+        title: const Text('Chat GPT'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -45,18 +45,18 @@ class _HomeState extends State<Home> {
           children: [
             TextField(
               controller: _controller,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Enter your message',
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 _sendMessage(_controller.text);
               },
-              child: Text('Send'),
+              child: const Text('Send'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(_response),
           ],
         ),
